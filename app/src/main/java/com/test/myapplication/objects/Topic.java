@@ -10,6 +10,11 @@ public class Topic {
     public Topic() {
     }
 
+    public Topic(String name, String text) {
+        this.name = name;
+        this.text = text;
+    }
+
     public Topic(int id, int diem, int loai, String name, String text) {
         this.id = id;
         this.diem = diem;

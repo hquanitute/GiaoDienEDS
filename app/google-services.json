@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651018590263",
+    "firebase_url": "https://eds-englishapp.firebaseio.com",
+    "project_id": "eds-englishapp",
+    "storage_bucket": "eds-englishapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651018590263:android:2d32829fed196305",
+        "android_client_info": {
+          "package_name": "com.test.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651018590263-3hkqatl3ic1q5tepo498b3nqrhp3it36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw2QX31pGnM_-4Uw5WV1NaBfkoFrCJXy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651018590263-3hkqatl3ic1q5tepo498b3nqrhp3it36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
