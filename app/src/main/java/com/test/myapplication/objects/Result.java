@@ -1,50 +1,83 @@
 package com.test.myapplication.objects;
 
-public class Result {
-    int idResult;
-    int idUser;
-    int idTopic;
-    int point;
+import java.io.Serializable;
+import java.util.Calendar;
+
+public class Result implements Serializable {
+    String id;
+    String textResult;
+    String idUser;
+    String idEnemy;
+    String idTopic;
+    double pointUser;
+    double pointEnemy;
 
     public Result() {
     }
 
-    public Result(int idResult, int idUser, int idTopic, int point) {
-        this.idResult = idResult;
+    public Result(String id,String idResult, String idUser, String idEnemy, String idTopic, double pointUser, double pointEnemy) {
+        this.id=id;
+        this.textResult = idResult;
         this.idUser = idUser;
+        this.idEnemy = idEnemy;
         this.idTopic = idTopic;
-        this.point = point;
+        this.pointUser = pointUser;
+        this.pointEnemy = pointEnemy;
     }
 
-    public int getIdResult() {
-        return idResult;
+    public String getId() {
+        return id;
     }
 
-    public void setIdResult(int idResult) {
-        this.idResult = idResult;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public int getIdUser() {
+    public String getTextResult() {
+        return textResult;
+    }
+
+    public void setTextResult(String idResult) {
+        this.textResult = idResult;
+    }
+
+    public String getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(String idUser) {
         this.idUser = idUser;
     }
 
-    public int getIdTopic() {
+    public String getIdEnemy() {
+        return idEnemy;
+    }
+
+    public void setIdEnemy(String idEnemy) {
+        this.idEnemy = idEnemy;
+    }
+
+    public String getIdTopic() {
         return idTopic;
     }
 
-    public void setIdTopic(int idTopic) {
+    public void setIdTopic(String idTopic) {
         this.idTopic = idTopic;
     }
 
-    public int getPoint() {
-        return point;
+    public double getPointUser() {
+        return pointUser;
     }
 
-    public void setPoint(int point) {
-        this.point = point;
+    public void setPointUser(double pointUser) {
+        this.pointUser = pointUser;
+    }
+
+    public double getPointEnemy() {
+        return pointEnemy;
+    }
+
+    public void setPointEnemy(double pointEnemy) {
+        this.pointEnemy = pointEnemy;
     }
 }

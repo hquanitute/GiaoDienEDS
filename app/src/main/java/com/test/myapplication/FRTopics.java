@@ -98,6 +98,7 @@ public class FRTopics extends Fragment {
         Intent intent = new Intent(getActivity(),Challengen.class);
         intent.putExtra("topic_name",topic.getName());
         intent.putExtra("topic_text",topic.getText());
+        intent.putExtra("email",email);
         startActivity(intent);
     }
 }
