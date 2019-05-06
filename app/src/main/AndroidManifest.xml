@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--<activity android:name=".Challengen"></activity>-->
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Challengen"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".Activity_use">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

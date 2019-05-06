@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -23,6 +26,9 @@ public class Challengen extends AppCompatActivity {
     Intent mSpeechRecognizerIntent;
     TextView tvSpoken;
     TextView tvThongBao;
+    Button btnSend;
+
+    private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,8 @@ public class Challengen extends AppCompatActivity {
         Intent intent = getIntent();
         tvQuestion=findViewById(R.id.tv_Challengen);
         btnSpeak=findViewById(R.id.btnSpeak);
+        btnSend = findViewById(R.id.btnSend);
+        btnSend.setVisibility(View.INVISIBLE);
 
         tvSpoken=findViewById(R.id.tvSpoken);
         tvThongBao=findViewById(R.id.textView4);
@@ -78,6 +86,7 @@ public class Challengen extends AppCompatActivity {
 
                 if(matches!= null){
                     tvThongBao.setVisibility(View.VISIBLE);
+                    btnSend.setVisibility(View.VISIBLE);
                     tvSpoken.setText(matches.get(0));
                 }
             }
@@ -113,5 +122,10 @@ public class Challengen extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    public void SendChallenge (View view){
+        //Tao 1 cái Reulst
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        //mDatabase.child("Result").push().setValue();
     }
 }

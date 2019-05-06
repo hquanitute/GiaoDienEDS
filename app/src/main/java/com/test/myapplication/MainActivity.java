@@ -11,11 +11,22 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.test.myapplication.Adapter.ViewPaperAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -26,13 +37,30 @@ public class MainActivity extends AppCompatActivity {
         checkPermission();
         tabLayout= findViewById(R.id.tabs);
         viewPager= findViewById(R.id.vp_main);
+
+        Intent intent = getIntent();
+        email = intent.getStringExtra("email");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("email", email);
+// set Fragmentclass Arguments
+        FRTopics fragTopic = new FRTopics();
+        FRTCustom fragCustom = new FRTCustom();
+        FRTUser fragUser = new FRTUser();
+
+        fragTopic.setArguments(bundle);
+        fragCustom.setArguments(bundle);
+        fragUser.setArguments(bundle);
+
         ViewPaperAdapter viewPaperAdapter = new ViewPaperAdapter(getSupportFragmentManager());
-        viewPaperAdapter.AddFragment(new FRTopics(),"Topics");
-        viewPaperAdapter.AddFragment(new FRTCustom(),"Custom");
-        viewPaperAdapter.AddFragment(new user(),"User");
+        viewPaperAdapter.AddFragment(fragTopic,"Topics");
+        viewPaperAdapter.AddFragment(fragCustom,"Challenge");
+        viewPaperAdapter.AddFragment(fragUser,"User");
 
         viewPager.setAdapter(viewPaperAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

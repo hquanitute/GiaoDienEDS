@@ -15,6 +15,7 @@ import com.test.myapplication.objects.Topic;
 import java.util.ArrayList;
 
 public class FRTCustom extends Fragment {
+    String email;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class FRTCustom extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        email = getArguments().getString("email");
         View view = inflater.inflate(R.layout.fragment_topics,container,false);
         ListView listView = view.findViewById(R.id.listviewTopics);
         ArrayList<Topic> topics = new ArrayList<>();

@@ -30,6 +30,7 @@ public class FRTopics extends Fragment {
     ArrayList<Topic> topics;
     TopicAdapter adapter;
     View view;
+    String email;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class FRTopics extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        email = getArguments().getString("email");
         view =inflater.inflate(R.layout.fragment_topics, container, false);
         lvTopics = view.findViewById(R.id.listviewTopics);
         lvTopics.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -59,6 +61,7 @@ public class FRTopics extends Fragment {
 //        for(int i= 0 ; i< topics.size();i++){
 //            mDatabase.child("Topic").push().setValue(topics.get(i));
 //        }
+
 
         mDatabase.child("Topic").addChildEventListener(new ChildEventListener() {
             @Override
