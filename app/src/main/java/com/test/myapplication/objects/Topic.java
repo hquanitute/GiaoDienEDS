@@ -7,6 +7,16 @@ public class Topic {
     String name;
     String text;
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    String image;
+
     public Topic() {
     }
 

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class FRTCustom extends Fragment {
-    ListView lvReults;
+    GridView lvReults;
     ArrayList<Result> results;
     ChallengeAdapter adapter;
     View view;

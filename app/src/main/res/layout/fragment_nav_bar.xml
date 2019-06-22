@@ -9,19 +9,25 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#00B2BF"
         app:layout_anchorGravity="bottom">
 
         <android.support.v7.widget.Toolbar
             android:layout_width="wrap_content"
             android:layout_height="?attr/actionBarSize"
-            android:elevation="4dp"
             android:layout_gravity="center"
+            android:elevation="4dp"
             app:layout_scrollFlags="scroll|enterAlways">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="COMMUNICATION"
-                android:textSize="30sp"/>
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:padding="10dp"
+                android:text=" COMMUNICATION"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 

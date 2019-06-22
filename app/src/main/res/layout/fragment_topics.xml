@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundfrag"
     tools:context=".FRTopics">
 
 
-    <ListView
-        android:id="@+id/listviewTopics"
+    <GridView
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="243dp" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/listviewTopics"
+        android:numColumns="auto_fit"></GridView>
 </LinearLayout>
