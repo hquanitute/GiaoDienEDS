@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRTHelp">
+    android:gravity="center|top"
+    tools:context=".FRTHelp"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundfrag">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="10dp">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text=" ➩ Mỗi người được quyền thi đấu bằng cách phát âm từ có trong mỗi level trong phần Thi Đấu."
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="18sp" />
+
+        />
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="➩ Phát âm đúng từ bảng thông báo sẽ hiện kết quả bạn sẽ được hoàn thành level nếu phát âm đúng."
+            android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="18sp" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="➩ Điểm sẽ được cộng dồn từ các level bạn đã hoàn thành."
+           android:textColor="#000000"
+            android:textStyle="bold|italic"
+            android:textSize="18sp" />
+
+        />
+
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text= "➩ Top 20 người chơi có số điểm cao nhất sẽ được nằm trong bảng xếp hạng."
+                android:textColor="#000000"
+                android:textStyle="bold|italic"
+                android:textSize="18sp" />
+
+            />
+        </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,11 +1,11 @@
 package com.test.myapplication;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.test.myapplication.objects.Result;
 
 import java.util.ArrayList;
@@ -109,7 +108,11 @@ public class Challengen extends AppCompatActivity {
                         tvSpoken.setText(matches.get(0));
                         tvDiem.setVisibility(View.VISIBLE);
                         diem=chamDiem(cauhoi,matches.get(0));
-                        tvDiem.setText(String.format("%.2f",chamDiem(cauhoi,matches.get(0))));
+                       /* if(chamDiem(cauhoi,matches.get(0))>=7)
+                            tvDiem.setText("Chính xác");
+                        else
+                            tvDiem.setText("Sai rồi! Thử lại nhé");*/
+                       tvDiem.setText(String.format("%.2f",chamDiem(cauhoi,matches.get(0))));
                         if(flag==1){
                             Toast.makeText(Challengen.this, (String.format("%.2f",chamDiem(cauhoi,matches.get(0)))), Toast.LENGTH_SHORT).show();
                             //them EnemyPoint
@@ -173,7 +176,6 @@ public class Challengen extends AppCompatActivity {
                 }
             }
         }
-
         if(banMau.length()>0){
             double diem=dem*10/splited1.length;
             return diem;

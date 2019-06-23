@@ -6,11 +6,12 @@
     android:background="@drawable/backgroundfrag"
     tools:context=".FRTopics">
 
-    <GridView
+
+    <ListView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:id="@+id/listviewTopics"
-        android:numColumns="auto_fit"></GridView>
+        android:id="@+id/lvChart"
+        android:numColumns="auto_fit"></ListView>
 </LinearLayout>

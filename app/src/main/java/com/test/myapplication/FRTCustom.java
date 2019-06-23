@@ -27,7 +27,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class FRTCustom extends Fragment {
-    GridView lvReults;
+    ListView lvReults;
     ArrayList<Result> results;
     ChallengeAdapter adapter;
     View view;
@@ -44,8 +44,8 @@ public class FRTCustom extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         email = getArguments().getString("email");
-        View view = inflater.inflate(R.layout.fragment_topics,container,false);
-        lvReults = view.findViewById(R.id.listviewTopics); // su dung lai fragment
+        View view = inflater.inflate(R.layout.activity_chart,container,false);
+        lvReults = view.findViewById(R.id.lvChart); // su dung lai fragment
         lvReults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -103,7 +103,7 @@ public class FRTCustom extends Fragment {
 
             }
         });
-        adapter= new ChallengeAdapter(view.getContext(),R.layout.challenge_row,results);
+        adapter= new ChallengeAdapter(view.getContext(),R.layout.rowlist_chart,results);
         lvReults.setAdapter(adapter);
         return view;
     }

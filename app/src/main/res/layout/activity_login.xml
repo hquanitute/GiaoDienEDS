@@ -64,4 +64,28 @@
             android:onClick="Login"
             android:text="Đăng Nhập"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Bạn chưa có tài khoản ?  "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="Đăng ký ngay"
+            android:onClick="SignUp"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+    </LinearLayout>
 </RelativeLayout>

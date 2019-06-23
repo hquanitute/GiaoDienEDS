@@ -4,16 +4,33 @@ public class User {
     int id;
     String username;
     String password;
-    int level;
 
-    public User() {
+    public String getDisplayname() {
+        return Displayname;
     }
 
-    public User(int id, String username, String password, int level) {
-        this.id = id;
+    public void setDisplayname(String displayname) {
+        Displayname = displayname;
+    }
+
+    String Displayname;
+
+    public String getLinkImage() {
+        return LinkImage;
+    }
+
+    public void setLinkImage(String linkImage) {
+        LinkImage = linkImage;
+    }
+
+    String LinkImage;
+    int level;
+
+    public User(String name, String username, String password,String linkImage) {
+        this.Displayname = name;
         this.username = username;
         this.password = password;
-        this.level = level;
+        this.LinkImage = linkImage;
     }
 
     public int getId() {

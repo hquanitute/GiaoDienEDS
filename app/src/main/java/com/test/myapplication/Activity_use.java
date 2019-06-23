@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class Activity_use extends AppCompatActivity {
     private EditText username;
     private EditText password;
+
     private FirebaseAuth mAuth;
     ArrayList<User> users;
 
@@ -30,6 +31,7 @@ public class Activity_use extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         this.username = (EditText)this.findViewById(R.id.Username);
         this.password = (EditText)this.findViewById(R.id.Password);
+
     }
     public void Login(View view) {
 //        users = new ArrayList<>();

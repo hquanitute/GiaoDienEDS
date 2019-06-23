@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(viewPaperAdapter);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setIcon(R.drawable.user);
-        tabLayout.getTabAt(1).setIcon(R.drawable.user);
+        tabLayout.getTabAt(1).setIcon(R.drawable.help);
         tabLayout.getTabAt(2).setIcon(R.drawable.fight);
         tabLayout.getTabAt(3).setIcon(R.drawable.result);
 
