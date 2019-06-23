@@ -25,13 +25,14 @@ public class Topic {
         this.text = text;
     }
 
-    public Topic(int id, int diem, int loai, String name, String text) {
+    public Topic(int id, int diem, int loai, String name, String text,String image) {
         this.id = id;
         this.diem = diem;
         this.loai = loai;
         this.name = name;
         this.text = text;
-    }
+        this.image = image;
+        }
 
     public String getName() {
         return name;

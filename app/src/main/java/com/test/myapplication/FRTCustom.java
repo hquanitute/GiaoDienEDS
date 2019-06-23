@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -19,9 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.test.myapplication.Adapter.ChallengeAdapter;
-import com.test.myapplication.Adapter.TopicAdapter;
 import com.test.myapplication.objects.Result;
-import com.test.myapplication.objects.Topic;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -60,13 +56,12 @@ public class FRTCustom extends Fragment {
         });
         mDatabase = FirebaseDatabase.getInstance().getReference();
         results = new ArrayList<>();
-//        topics.add(new Topic("Bài a", "Hello everybody"));
+        //topics.add(new Topic("Bài a", "Hello everybody"));
 //        topics.add(new Topic("Bài 2","In the past, many such disputes have been handled through negotiation. In 1796, George Washington refused a House request for documents concerning the Jay Treaty with Britain, arguing that treaties were the sole purview of the Senate — to which he did release the papers. "));
 //        topics.add(new Topic("Bài 2","My name is Hoang Quan"));
 //        topics.add(new Topic("Bài 2","My name is Hoang Quan"));
-
 //        topics.add(new Topic(a,5,0,"Lesson a","Hello everone , my name is Hoang Quan"));
-//        topics.add(new Topic(3,10,0,"Lesson 3","Nice to meet you"));
+        // topics.add(new Topic(3,10,0,"Lesson 3","Nice to meet you"));
 //        for(int i= 0 ; i< topics.size();i++){
 //            mDatabase.child("Topic").push().setValue(topics.get(i));
 //        }
