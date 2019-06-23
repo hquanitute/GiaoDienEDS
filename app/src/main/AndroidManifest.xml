@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FRTHelp"></activity>
-        <!-- <activity android:name=".Challengen"></activity> -->
+        <activity android:name=".BangXepHang_test"></activity>
+        <activity android:name=".FRTHelp" /> <!-- <activity android:name=".Challengen"></activity> -->
         <activity android:name=".MainActivity" />
         <activity android:name=".Challengen" />
         <activity android:name=".SignUp" />

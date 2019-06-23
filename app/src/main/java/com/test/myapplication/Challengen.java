@@ -183,7 +183,7 @@ public class Challengen extends AppCompatActivity {
         return 0;
     }
     public void SendChallenge (View view){
-        //Tao 1 cái Reulst
+        //Tao a cái Reulst
         Result result= new Result();
         if(email.equals("hung@gmail.com")){
             result.setIdUser("hung@gmail.com");

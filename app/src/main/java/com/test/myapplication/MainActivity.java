@@ -3,17 +3,14 @@ package com.test.myapplication;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.TextView;
 
 import com.test.myapplication.Adapter.ViewPaperAdapter;
 
@@ -49,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         FRTUser fragUser = new FRTUser();
         FRTHelp fragHelp = new FRTHelp();
         FRTopics fragTopic = new FRTopics();
-        FRTCustom fragCustom = new FRTCustom();
+       BangXepHang_test fragCustom = new BangXepHang_test();
+
 
         fragUser.setArguments(bundle);
         fragHelp.setArguments(bundle);
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /*tabLayout.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
-        tabLayout.getTabAt(1).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(a).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
         tabLayout.getTabAt(2).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);*/
 
 

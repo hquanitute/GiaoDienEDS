@@ -35,10 +35,10 @@ public class Activity_use extends AppCompatActivity {
     }
     public void Login(View view) {
 //        users = new ArrayList<>();
-//        users.add(new User(1,"16110348","123",16110348,"Hoang Hung"));
+//        users.add(new User(a,"16110348","123",16110348,"Hoang Hung"));
 //        users.add(new User(2,"16110429","123",16110429,"Hoang Quan"));
         CheckLogin(view);
-//       if(username.getText().toString().equals("1")) {
+//       if(username.getText().toString().equals("a")) {
 //           intent(view);
 //        }
     }

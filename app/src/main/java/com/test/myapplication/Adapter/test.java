@@ -5,19 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.test.myapplication.R;
-import com.test.myapplication.objects.Result;
+import com.test.myapplication.objects.resulttest;
 
 import java.util.List;
 
-public class ChallengeAdapter extends BaseAdapter {
+public class test extends BaseAdapter {
     private Context context;
     private int layout;
-    private List<Result> results;
+    private List<resulttest> results;
 
-    public ChallengeAdapter(Context context, int layout, List<Result> results) {
+    public test(Context context, int layout, List<resulttest> results) {
         this.context = context;
         this.layout = layout;
         this.results = results;
@@ -40,20 +41,25 @@ public class ChallengeAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(layout,null);
+        convertView = LayoutInflater.from(context).inflate(R.layout.rowlist_chart,parent,false);
+        ImageView img = convertView.findViewById(R.id.profile_image);
         TextView tvName = convertView.findViewById(R.id.name);
         TextView tvPositon= convertView.findViewById(R.id.position);
         TextView tvYourPoint = convertView.findViewById(R.id.Score);
         //TextView tvEnemyPoint = convertView.findViewById(R.id.enemy_point_row_challenge);
 
-        Result result = results.get(position);
-        tvName.setText(result.getIdEnemy());
-       // tvText.setText(result.getIdTopic());
+        resulttest result  = results.get(position);
+        tvName.setText(result.getEmail());
+        // tvText.setText(result.getIdTopic());
         tvPositon.setText(String.valueOf(position+1));
-        if(result.getIdUser().equals("hung@gmail.com")){
-            tvYourPoint.setText("Hung "+result.getPointUser()+" - "+result.getPointEnemy()+" Quan");
-        }
+        tvYourPoint.setText(String.valueOf(result.getScore()));
+        int ImageID = getMipmapResIdByName(result.getImg());
+        img.setImageResource(ImageID);
         return convertView;
+    }
+    public int getMipmapResIdByName(String resName) {
+        String pkgName = context.getPackageName();
+        int resID = context.getResources().getIdentifier(resName , "mipmap", pkgName);
+        return resID;
     }
 }
