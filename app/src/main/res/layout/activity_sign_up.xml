@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:text="Đăng nhập ngay"
-            android:onClick="SignUp"
+            android:onClick="SignIn"
             android:textStyle="bold"
             tools:ignore="OnClick" />
     </LinearLayout>

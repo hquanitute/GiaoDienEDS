@@ -20,7 +20,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.test.myapplication.objects.User;
 
 import java.util.ArrayList;
@@ -50,10 +49,6 @@ public class SignUp extends AppCompatActivity {
         this.password = this.findViewById(R.id.Password);
         this.displayName = this.findViewById(R.id.displayName);
         this.img = this.findViewById(R.id.avatar);
-        final String userid = firebaseUser.getUid();
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-
-
     }
     public void selectImage(View view){
         opengallery();
