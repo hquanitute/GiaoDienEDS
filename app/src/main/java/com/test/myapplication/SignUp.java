@@ -34,6 +34,7 @@ public class SignUp extends AppCompatActivity {
     private static final int PICK_IMAGE=100;
     private static String imagename;
     ArrayList<User> users;
+    String displayname;
     EditText displayName;
     ImageView img;
     boolean check=false;
@@ -73,8 +74,8 @@ public class SignUp extends AppCompatActivity {
             cursor.moveToFirst();
             imagename = cursor.getString(nameIndex);
             imagename = imagename.substring(0, imagename.length() - 4);
-            //Toast.makeText(getContext(),imagename.toString(),Toast.LENGTH_LONG).show();
-            //check=true;
+            //Toast.makeText(ge.tContext(),imagename.toString(),Toast.LENGTH_LONG).show();
+            check=true;
         }
     }
     public void SignUp(View view) {
@@ -91,23 +92,9 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                           /* FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                            assert firebaseUser != null;
-                            String userid=firebaseUser.getUid();
-                            String name = firebaseUser.getDisplayName();
-
-
-                            databaseReference=FirebaseDatabase.getInstance().getReference("Users").child(userid);
-
-                            HashMap<String,String> hashMap=new HashMap<>();
-                            hashMap.put("id",userid);
-                            hashMap.put("account_name",name);
-                            hashMap.put("imageURL","default");
-
-                            databaseReference.setValue(hashMap);*/
-                            Toast.makeText(SignUp.this,"Sign Up Success !",Toast.LENGTH_LONG).show();
-                            Intent intent1 = new Intent(getApplication(), Activity_use.class);
-                            startActivity(intent1);
+                                            Toast.makeText(SignUp.this,"Sign Up Success !",Toast.LENGTH_LONG).show();
+                                            Intent intent1 = new Intent(getApplication(), Activity_use.class);
+                                            startActivity(intent1);
                         } else {
                             Toast.makeText(SignUp.this,"Sign Up Fail ! Try Again !",Toast.LENGTH_LONG).show();
                         }
