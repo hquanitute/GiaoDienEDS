@@ -28,6 +28,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:text="Lê Hoàng Hưng"
+                android:id="@+id/Name"
                 android:textColor="#fff"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -68,7 +69,8 @@
                         android:text="125"
                         android:textColor="#4bb6ef"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:id="@+id/hightscore"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -105,40 +107,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_mail_black_24dp"/>
-            <TextView
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:paddingLeft="20dp"
-                android:text="Wiliam@gmail.com"
-                android:id="@+id/Name"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
+        android:layout_marginTop="25dp"/>
 
     <Button
-        android:textColor="#000000"
+        android:id="@+id/btnLogout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/buttonbolder"
         android:drawableTop="@drawable/icon_exit"
-        android:layout_marginTop="50dp"
         android:padding="10dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="200dp"
-        android:id="@+id/btnLogout"
-        android:layout_height="wrap_content"
-        android:text="Đăng xuất"/>
+        android:text="Đăng xuất"
+        android:textColor="#000000" />
 
 </LinearLayout>

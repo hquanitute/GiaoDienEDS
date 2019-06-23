@@ -16,7 +16,6 @@ import com.test.myapplication.Adapter.ViewPaperAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private String email;
 
     public String getEmail() {

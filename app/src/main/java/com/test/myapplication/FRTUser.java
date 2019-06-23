@@ -8,23 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
-
 
 public class FRTUser extends Fragment {
-    private TextView username;
+    private TextView username,score;
     Button logout;
     String email;
     // private TextView level;
     View view;
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
@@ -36,6 +28,7 @@ public class FRTUser extends Fragment {
         view = inflater.inflate(R.layout.fragment_user, container, false);
         username = view.findViewById(R.id.Name);
         logout = view.findViewById(R.id.btnLogout);
+        score = view.findViewById(R.id.hightscore);
         username.setText(email);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
