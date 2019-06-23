@@ -3,6 +3,8 @@ package com.test.myapplication;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
@@ -44,21 +46,37 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("email", email);
 // set Fragmentclass Arguments
+        FRTUser fragUser = new FRTUser();
+        FRTHelp fragHelp = new FRTHelp();
         FRTopics fragTopic = new FRTopics();
         FRTCustom fragCustom = new FRTCustom();
-        FRTUser fragUser = new FRTUser();
 
+        fragUser.setArguments(bundle);
+        fragHelp.setArguments(bundle);
         fragTopic.setArguments(bundle);
         fragCustom.setArguments(bundle);
-        fragUser.setArguments(bundle);
+
 
         ViewPaperAdapter viewPaperAdapter = new ViewPaperAdapter(getSupportFragmentManager());
-        viewPaperAdapter.AddFragment(fragTopic,"Topics");
-        viewPaperAdapter.AddFragment(fragCustom,"Challenge");
-        viewPaperAdapter.AddFragment(fragUser,"User");
+        viewPaperAdapter.AddFragment(fragUser,"Hồ sơ");
+        viewPaperAdapter.AddFragment(fragHelp,"Thể lệ");
+        viewPaperAdapter.AddFragment(fragTopic,"Thi đấu");
+        viewPaperAdapter.AddFragment(fragCustom,"BXH");
 
         viewPager.setAdapter(viewPaperAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.user);
+        tabLayout.getTabAt(1).setIcon(R.drawable.user);
+        tabLayout.getTabAt(2).setIcon(R.drawable.fight);
+        tabLayout.getTabAt(3).setIcon(R.drawable.result);
+
+
+
+        /*tabLayout.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(1).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(2).getIcon().setColorFilter(Color.parseColor("#ffffff"), PorterDuff.Mode.SRC_IN);*/
+
+
 
 
     }

@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <android.support.design.widget.AppBarLayout
+   <!-- <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00B2BF"
+        android:background="#66CCFF"
+        android:padding="5dp"
         app:layout_anchorGravity="bottom">
 
         <android.support.v7.widget.Toolbar
@@ -28,42 +29,34 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </android.support.v7.widget.Toolbar>
-    </android.support.design.widget.AppBarLayout>
-
+    </android.support.design.widget.AppBarLayout>-->
    <!-- <fragment
         android:id="@+id/fragment"
         android:name="com.test.myapplication.NavBar"
         android:background="#FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/vp_main"
+        android:layout_weight="1"
+        >
+    </android.support.v4.view.ViewPager>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="#00B2BF"
+        android:layout_below="@id/vp_main"
         app:tabGravity="fill"
-        app:tabIndicatorColor="#FFFFFF"
+        app:tabIndicatorColor="#00CCFF"
         app:tabIndicatorHeight="2dp"
-        app:tabSelectedTextColor="#DDDDDD"
         app:tabMode="fixed"
-        app:tabTextColor="#FFFFFF">
-    </android.support.design.widget.TabLayout>
-    
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/vp_main"
-        android:layout_below="@id/tabs">
-
-    </android.support.v4.view.ViewPager>
-    <!--<android.support.v4.widget.NestedScrollView-->
-    <!--android:id="@+id/nestedScrollView"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">-->
-    <!--</android.support.v4.widget.NestedScrollView>-->
+        app:tabSelectedTextColor="#3366CC"
+        app:tabTextColor="#66CCFF"
+        ></android.support.design.widget.TabLayout>
 
 
 </LinearLayout>
